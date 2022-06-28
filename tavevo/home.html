@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Tavevo CCS</title>
+        <!-- <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet'> -->
+        <link href='./assets/bootstrap.min.css' rel='stylesheet'>
+
+        <link href='./assets/font-awesome.min.css' rel='stylesheet'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+        <!-- <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script> -->
+        <script type='text/javascript' src='./assets/jquery-3.6.0.min.js'></script>
+        
+        <link rel="stylesheet" href="./mystyle.css">
+    </head>
+    <body className='snippet-body'>
+        <!-- <nav class="navbar navbar-light bg-light sticky-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">
+                <div class="text-center">
+                    <img src="./assets/Images/tavevo-logo.jpg" alt="" width="170" height="" >
+                </div>
+                <div class="">
+                  <h1 id="register">Complaints and Compliments System</h1>
+                </div> 
+              </a>
+            </div>
+          </nav>  -->
+
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
+            <form id="regForm">
+                <div class="text-center">
+                    <img src="./assets/Images/tavevo-logo.jpg" alt="" width="170" height="" >
+                </div>
+                <h1 id="register">Complaints and Compliments System</h1>
+                <div class="all-steps" id="all-steps"> 
+                  <span class="step"><i class="fa fa-user"></i></span> 
+                  <span class="step"><i class="fa fa-map-marker"></i></span>
+                  <span class="step"><i class="fa fa-file-text"></i></span>
+                  <!-- <span class="step"><i class="fa fa-car"></i></span>
+                  <span class="step"><i class="fa fa-spotify"></i></span>-->
+                  <!-- <span class="step"><i class="fa fa-mobile-phone"></i></span> -->
+                </div>
+
+                <div class="tab">
+
+
+  
+                   
+
+                    <h6>What's your Full name?</h6>
+                    <p>
+                        <input placeholder="Name..." oninput="this.className = ''" name="fname">
+                    </p>
+                    <h6>What's your Phone?</h6>
+                    <p>
+                        <input type="number" placeholder="Phone..." oninput="this.className = ''" name="phone">
+                    </p>
+                    <h6>What's your Email? (optional)</h6>
+                    <p>
+                        <input type="email" placeholder="optional" oninput="this.className = ''" name="email">
+                    </p>
+                    
+                </div>
+                <div class="tab">
+                  <h6>What's your Account Number?</h6>
+                    <p><input type="number" placeholder="A/c No" oninput="this.className = ''" name="dd"></p>
+                    <h6>Nearest Office Headquaters?</h6>
+                    <p>
+                        <select name="headquaters" oninput="this.className = ''">
+                            <option value="" disabled selected> Please Specify (Tafadhali Thibitisha)</option>
+                            <option value="Voi">Voi</option>
+                            <option value="Makina">Makina</option>
+                            <option value="Maungu">Maungu</option>
+                            <option value="Mbololo">Mbololo</option>
+                            <option value="Mwatate">Mwatate</option>
+                            <option value="Wundanyi">Wundanyi</option>
+                            <option value="Taveta">Taveta</option>
+                        </select>
+                    </p>
+                </div>
+                <div class="tab">
+                    <h6>What are you reporting?</h6>
+                    <p>
+                        <select name="incident_type" id="report" oninput="this.className = ''">
+                            <option value="" disabled selected> Please Specify (Tafadhali Thibitisha)</option>
+                            <option value="Compliment">Compliments/Pongezi</option>
+                            <option value="Complaint">Complaints/Malalamishi</option>
+                            <option value="Query">Query/Swali</option>
+                            <option value="Suggestion">Suggestion/Pendekezo</option>
+                            <option value="Corruption">Corruption/Ufisadi</option>
+                        </select>
+                    </p>
+                    <div id="display">
+
+                    </div>
+
+                    <div id="showmore">
+                        <h6>Tell us more</h6>
+                        <textarea name="id_description" rows="5" oninput="this.className = ''"></textarea>
+                        <button class="btn btn-warning" type="submit">Submit</button>
+                    </div>
+                </div>
+                <!-- <div class="tab">
+                    <h6>What's your Favourite car?</h6>
+                    <p><input placeholder="Favourite car" oninput="this.className = ''" name="uname"></p>
+                </div>
+
+                <div class="tab">
+                    <h6>What's your Favourite Song?</h6>
+                    <p><input placeholder="Favourite Song" oninput="this.className = ''" name="uname"></p>
+                </div> -->
+
+
+                <!-- <div class="tab"> -->
+                    <!-- Button trigger modal -->
+                    <!-- <h6>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Submit
+                        </button>
+                    </h6> -->
+                    
+                      <!-- Modal -->
+                    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="thanks-message text-center" id="text-message"> <img src="https://i.imgur.com/O18mJ1K.png" width="100" class="mb-4">
+                                        <h3>Thankyou for your feedback!</h3> <span>Thanks for your valuable information. It helps us to improve our services!</span>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  -->
+                
+                <!-- </div> -->
+
+                <div style="overflow:auto;" id="nextprevious">
+                    <div style="float:right;">
+                      <button type="button" id="prevBtn" onclick="nextPrev(-1)"><i class="fa fa-angle-double-left"></i></button> 
+                      <button type="button" id="nextBtn" onclick="nextPrev(1)"><i class="fa fa-angle-double-right"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>
+<script type='text/javascript' src='./assets/bootstrap.min.js'></script>
+<script type='text/javascript' src='#'></script>
+<script type='text/javascript' src='./controller.js'></script>
+
+    <!-- <script src="./algos.js"></script> -->
+    <!-- <script type='text/javascript'>
+        var myLink = document.querySelector('a[href="#"]');
+        myLink.addEventListener('click', function(e) {
+            e.preventDefault();
+        });
+    </script> -->
+                            
+    </body>
+    <!-- <footer>
+        <nav class="navbar navbar-light bg-light fixed-bottom">
+            <div class="container-fluid">
+              <a class="navbar-brand " href="/">
+                <img src="./assets/Images/tavevo-logo.jpg" alt="" width="150" height="" >
+                <div class="">
+                </div> 
+              </a>
+            </div>
+          </nav>
+    </footer> -->
+</html>
